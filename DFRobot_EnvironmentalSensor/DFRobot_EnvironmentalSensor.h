@@ -1,6 +1,8 @@
 #pragma once
 #include "esphome/components/sensor/sensor.h"
 #include "esphome/core/component.h"
+#include "src/DFRobot_EnvironmentalSensor.h"
+#include <Wire.h>
 
 namespace esphome {
 namespace dfrobotenvironmentalsensor {
@@ -21,6 +23,7 @@ class DFRobotEnvironmentalSensorComponent : PollingComponent {
     void update() override;
 
   protected:
+    DFRobot_EnvironmentalSensor environment_;
     sensor::Sensor *temperature_sensor_{nullptr};
     sensor::Sensor *pressure_sensor_{nullptr};
     sensor::Sensor *humidity_sensor_{nullptr};
