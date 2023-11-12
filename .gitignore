@@ -4,3 +4,8 @@
 /.esphome/
 /secrets.yaml
 venv
+CMakeLists.txt
+esphome
+compile_commands.json
+.cache
+.pio
