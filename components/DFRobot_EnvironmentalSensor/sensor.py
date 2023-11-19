@@ -27,7 +27,25 @@ DFRobotEnvironmentalSensorComponent = dfrobotenvironmentalsensor_ns.class_(
 CONFIG_SCHEMA = (
     cv.Schema(
         {
-            cv.GenerateID(): cv.declare_id(DFRobotEnvironmentalSensorComponent)
+            cv.GenerateID(): cv.declare_id(DFRobotEnvironmentalSensorComponent),
+            cv.Optional(CONF_TEMPERATURE): sensor.sensor_schema(
+                unit_of_measurement=UNIT_CELSIUS,
+                accuracy_decimals=1,
+                device_class=DEVICE_CLASS_TEMPERATURE,
+                state_class=STATE_CLASS_MEASUREMENT,
+            ),
+            cv.Optional(CONF_PRESSURE): sensor.sensor_schema(
+                unit_of_measurement=UNIT_HECTOPASCAL,
+                accuracy_decimals=1,
+                device_class=DEVICE_CLASS_PRESSURE,
+                state_class=STATE_CLASS_MEASUREMENT,
+            ),
+            cv.Optional(CONF_HUMIDITY): sensor.sensor_schema(
+                unit_of_measurement=UNIT_PERCENT,
+                accuracy_decimals=1,
+                device_class=DEVICE_CLASS_HUMIDITY,
+                state_class=STATE_CLASS_MEASUREMENT,
+            )
         }
     )
     .extend(cv.polling_component_schema("60s"))
