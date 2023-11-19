@@ -52,6 +52,10 @@ CONFIG_SCHEMA = (
 )
 
 async def to_code(config):
+    cg.add_library("Wire")
+    cg.add_library("DFRobot_RTU")
+    cg.add_library("DFRobot_EnvironmentalSensor")
+
     var = cg.new_Pvariable(config[CONF_ID])
     await cg.register_component(var, config)
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "esphome/components/sensor/sensor.h"
 #include "esphome/core/component.h"
-#include "src/DFRobot_EnvironmentalSensor.h"
+#include "DFRobot_EnvironmentalSensor.h"
 #include <Wire.h>
 
 namespace esphome {

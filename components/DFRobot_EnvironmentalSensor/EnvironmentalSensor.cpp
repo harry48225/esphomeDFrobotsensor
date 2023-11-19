@@ -1,6 +1,6 @@
-#include "DFRobot_EnvironmentalSensor.h"
+#include "EnvironmentalSensor.h"
 #include "esphome/core/log.h"
-#include "src/DFRobot_EnvironmentalSensor.h"
+#include "DFRobot_EnvironmentalSensor.h"
 
 namespace esphome {
 namespace dfrobotenvironmentalsensor {
