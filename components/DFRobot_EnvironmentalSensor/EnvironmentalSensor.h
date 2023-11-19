@@ -18,12 +18,12 @@ class DFRobotEnvironmentalSensorComponent : public PollingComponent {
     // ========== INTERNAL METHODS ==========
     // (In most use cases you won't need these)
     void setup() override;
-    void dump_config() override;
-    float get_setup_priority() const override;
+    //void dump_config() override;
+    //float get_setup_priority() const override;
     void update() override;
 
   protected:
-    DFRobot_EnvironmentalSensor environment_;
+    DFRobot_EnvironmentalSensor *environment_{nullptr};
     sensor::Sensor *temperature_sensor_{nullptr};
     sensor::Sensor *pressure_sensor_{nullptr};
     sensor::Sensor *humidity_sensor_{nullptr};
