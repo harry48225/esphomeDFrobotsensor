@@ -26,10 +26,10 @@ void DFRobotEnvironmentalSensorComponent::update() {
   humidity_sensor_->publish_state(humidity);
 
   auto uv = environment_.getUltravioletIntensity();
-  uv_sensor_>publish_state(uv);
+  uv_sensor_->publish_state(uv);
 
   auto lumens = environment_.getLuminousIntensity();
-  light_sensor_>publish_state(lumens);
+  light_sensor_->publish_state(lumens);
   ESP_LOGV(TAG, "Published readings");
 }
 }  // namespace dfrobotenvironmentalsensor
