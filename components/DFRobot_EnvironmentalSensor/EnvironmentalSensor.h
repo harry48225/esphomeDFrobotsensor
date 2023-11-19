@@ -7,7 +7,7 @@
 namespace esphome {
 namespace dfrobotenvironmentalsensor {
 
-class DFRobotEnvironmentalSensorComponent : PollingComponent {
+class DFRobotEnvironmentalSensorComponent : public PollingComponent {
   public:
     void set_temperature_sensor(sensor::Sensor *temperature_sensor) { temperature_sensor_ = temperature_sensor; }
     void set_pressure_sensor(sensor::Sensor *pressure_sensor) { pressure_sensor_ = pressure_sensor; }
